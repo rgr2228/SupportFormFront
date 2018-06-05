@@ -1,0 +1,46 @@
+<form name="requestForm" (submit)="onSave()">
+	<div>
+		<div>
+			<label>Fecha</label>
+			<input type="text" placeholder="Fecha de solicitud" required [(ngModel)]="cliente.cedula" name="date">
+		</div>
+		<div>
+			<label>Hora</label>
+			<input type="text" placeholder="Hora de solicitud" required [(ngModel)]="cliente.nombres" name="eventTime">
+		</div>
+		<div>
+			<label>Nombre</label>
+			<input type="text" placeholder="Nombre del solicitante" required [(ngModel)]="cliente.apellidos" name="user">
+		</div>
+		<div>
+			<label>Oficina</label>
+			<input type="text" placeholder="Oficina del solicitante" required [(ngModel)]="cliente.correoElectronico" name="office">
+    </div>
+    <div>
+			<label>Descripción</label>
+			<input type="text" placeholder="Descripción de solicitud" required [(ngModel)]="cliente.correoElectronico" name="description">
+    </div>
+    <div>
+			<label>Tipo</label>
+			<input type="text" placeholder="Tipo de solicitud" required [(ngModel)]="cliente.correoElectronico" name="typeRequest">
+    </div>
+    <div>
+			<label>Canal</label>
+			<input type="text" placeholder="Canal de solicitud" required [(ngModel)]="cliente.correoElectronico" name="channel">
+    </div>
+    <div>
+			<label>Prioridad</label>
+			<input type="text" placeholder="Prioridad de solicitud" required [(ngModel)]="cliente.correoElectronico" name="priority">
+    </div>
+    <div>
+			<label>Nivel</label>
+			<input type="text" placeholder="Nivel de solicitud" required [(ngModel)]="cliente.correoElectronico" name="level">
+    </div>
+    <div>
+			<label>Estado</label>
+			<input type="text" placeholder="Estado de solicitud" required [(ngModel)]="cliente.correoElectronico" name="state">
+    </div>
+		<button type="submit">Guardar</button>
+		<span>{{errorMessage}}</span>
+	</div>
+</form>
