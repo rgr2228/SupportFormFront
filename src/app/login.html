@@ -1,0 +1,15 @@
+<form name="loginUserForm">
+	<div>
+		<div>
+			<label>Usuario</label>
+			<input type="text" required name="nombreUsuario" [(ngModel)]="userName"/>
+		</div>
+		<div>
+			<label>Contraseña</label>
+			<input type="password" required name="pws" [(ngModel)]="pws"/>
+		</div>
+		<button name="Validar" type="submit" (click)="OnLogin()">Enviar</button>
+	</div>
+	<span>{{errorMessage}}</span>
+</form>
+
