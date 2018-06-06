@@ -10,12 +10,16 @@ export class ServiciosService {
     constructor(private http: Http) {}
 
     login(user: string, pws: string): Observable<any> {
-
-      let url = 'http://localhost:8080/SupportFormServices/rest/User/login?email=' + user +
-      '&password=' + pws;
-      return this.http.post(url, {}).map(response=>{return response.text()});
+      return this.http.post('http://localhost:8080/SupportFormServices/rest/User/login?email=' + user +
+      '&password=' + pws, {}).map(response => {return response.text()});
 
       //  return this.http.get("http://localhost:8080/WSEjemplo/rest/Usuario?login="+user+"&clave="+pws).
        // map(response=>{return response.text()})
     }
+
+    getRequests() {
+      return this.http.post('http://localhost:8080/SupportFormServices/rest/Request', {}).
+      map(response => {return response.text()});
+    }
+
 }

@@ -10,10 +10,21 @@ import {Router} from '@angular/router';
 export class LoginComponent {
 
   userName = '';
-    pws = '';
-    errorMessage = '';
+  pws = '';
+  errorMessage = '';
+
+  constructor(public service: ServiciosService, public router: Router) {}
 
     OnLogin() {
-
+      alert('Click');
+      this.service.login(this.userName, this.pws).subscribe(
+        result => {
+          alert('Autentico');
+          this.router.navigate(['/requests']);
+        },
+        error => {
+          console.log(<any>error);
+        }
+      );
     }
 }
