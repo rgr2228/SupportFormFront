@@ -1,7 +1,7 @@
+import { Request } from './request';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { Http} from '@angular/http';
-// tslint:disable-next-line:import-spacing
+import { Http, Response} from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -20,6 +20,10 @@ export class ServiciosService {
     getRequests() {
       return this.http.post('http://localhost:8080/SupportFormServices/rest/Request', {}).
       map(response => {return response.text()});
+    }
+
+    createRequest(request: Request) {
+      return this.http.post('', {}).map(response => {return response.text()});
     }
 
 }

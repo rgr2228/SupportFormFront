@@ -4,7 +4,8 @@ import {ServiciosService} from './user.service';
 import {Router} from '@angular/router';
 
 @Component({
-    templateUrl: './login.html'
+    templateUrl: './login.html',
+    styleUrls: ['./app.component.css']
 })
 
 export class LoginComponent {

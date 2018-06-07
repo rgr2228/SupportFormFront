@@ -20,4 +20,8 @@ export class RequestListComponent {
     );
   }
 
+  onNew() {
+    this.router.navigate(['/createRequest']);
+  }
+
 }

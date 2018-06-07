@@ -1,15 +1,10 @@
-<form name="loginUserForm">
-	<div>
-		<div>
-			<label>Usuario</label>
-			<input type="text" required name="nombreUsuario" [(ngModel)]="userName"/>
-		</div>
-		<div>
-			<label>Contraseña</label>
-			<input type="password" required name="pws" [(ngModel)]="pws"/>
-		</div>
-		<button name="Validar" type="submit" (click)="OnLogin()">Enviar</button>
-	</div>
-	<span>{{errorMessage}}</span>
-</form>
-
+<div class="login-page">
+  <div class="form">
+    <form name="loginUserForm" class="login-form">
+      <input type="text" placeholder="username" required name="nombreUsuario" [(ngModel)]="userName" placeholder="Usuario"/>
+      <input type="password" placeholder="password" required name="pws" [(ngModel)]="pws" placeholder="password"/>
+      <button name="Validar" type="submit" (click)="OnLogin()">Enviar</button>
+      <span>{{errorMessage}}</span>
+    </form>
+  </div>
+</div>

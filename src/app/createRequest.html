@@ -1,44 +1,44 @@
 <form name="requestForm" (submit)="onSave()">
 	<div>
 		<div>
-			<label>Fecha</label>
-			<input type="text" placeholder="Fecha de solicitud" required [(ngModel)]="cliente.cedula" name="date">
+			<label>Fecha:</label>
+			<input type="date" placeholder="Fecha de solicitud" required [(ngModel)]="request.date" name="date">
 		</div>
 		<div>
-			<label>Hora</label>
-			<input type="text" placeholder="Hora de solicitud" required [(ngModel)]="cliente.nombres" name="eventTime">
+			<label>Hora:</label>
+			<input type="time" placeholder="Hora de solicitud" required [(ngModel)]="request.eventTime" name="eventTime">
 		</div>
 		<div>
-			<label>Nombre</label>
-			<input type="text" placeholder="Nombre del solicitante" required [(ngModel)]="cliente.apellidos" name="user">
+			<label>Nombre:</label>
+			<input type="text" placeholder="Nombre del solicitante" required [(ngModel)]="request.user" name="user">
 		</div>
 		<div>
-			<label>Oficina</label>
-			<input type="text" placeholder="Oficina del solicitante" required [(ngModel)]="cliente.correoElectronico" name="office">
+			<label>Oficina:</label>
+			<input type="text" placeholder="Oficina del solicitante" required [(ngModel)]="request.office" name="office">
     </div>
     <div>
-			<label>Descripción</label>
-			<input type="text" placeholder="Descripción de solicitud" required [(ngModel)]="cliente.correoElectronico" name="description">
+			<label>Descripción:</label>
+			<input type="text" placeholder="Descripción de solicitud" required [(ngModel)]="request.description" name="description">
     </div>
     <div>
-			<label>Tipo</label>
-			<input type="text" placeholder="Tipo de solicitud" required [(ngModel)]="cliente.correoElectronico" name="typeRequest">
+			<label>Tipo:</label>
+			<input type="text" placeholder="Tipo de solicitud" required [(ngModel)]="request.type" name="typeRequest">
     </div>
     <div>
-			<label>Canal</label>
-			<input type="text" placeholder="Canal de solicitud" required [(ngModel)]="cliente.correoElectronico" name="channel">
+			<label>Canal:</label>
+			<input type="text" placeholder="Canal de solicitud" required [(ngModel)]="request.channel" name="channel">
     </div>
     <div>
-			<label>Prioridad</label>
-			<input type="text" placeholder="Prioridad de solicitud" required [(ngModel)]="cliente.correoElectronico" name="priority">
+			<label>Prioridad:</label>
+			<input type="text" placeholder="Prioridad de solicitud" required [(ngModel)]="request.priority" name="priority">
     </div>
     <div>
-			<label>Nivel</label>
-			<input type="text" placeholder="Nivel de solicitud" required [(ngModel)]="cliente.correoElectronico" name="level">
+			<label>Nivel:</label>
+			<input type="text" placeholder="Nivel de solicitud" required [(ngModel)]="request.level" name="level">
     </div>
     <div>
-			<label>Estado</label>
-			<input type="text" placeholder="Estado de solicitud" required [(ngModel)]="cliente.correoElectronico" name="state">
+			<label>Estado:</label>
+			<input type="text" placeholder="Estado de solicitud" required [(ngModel)]="request.status" name="state">
     </div>
 		<button type="submit">Guardar</button>
 		<span>{{errorMessage}}</span>

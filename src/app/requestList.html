@@ -1,0 +1,31 @@
+<div>
+	<table border="1" width="100%">
+		<tr>
+			<th height="10%">Nro</th>
+			<th height="25%">Fecha</th>
+      <th height="25%">Hora</th>
+      <th height="25%">Solicitante</th>
+      <th height="25%">Oficina</th>
+      <th height="60%">Descripción</th>
+      <th height="25%">Tipo</th>
+      <th height="25%">Canal</th>
+      <th height="25%">Prioridad</th>
+      <th height="25%">Nivel</th>
+      <th height="25%">Estado</th>
+		</tr>
+		<tr *ngFor="let request of requests">
+			<td>{{request.idRequest}}</td>
+			<td>{{request.date}}</td>
+      <td>{{request.eventTime}}</td>
+      <td>{{request.user}}</td>
+      <td>{{request.office}}</td>
+      <td>{{request.description}}</td>
+      <td>{{request.type}}</td>
+      <td>{{request.channel}}</td>
+      <td>{{request.priority}}</td>
+      <td>{{request.level}}</td>
+      <td>{{request.status}}</td>
+		</tr>
+	</table>
+	<button (click)="onNew()">Crear nuevo </button>
+</div>
