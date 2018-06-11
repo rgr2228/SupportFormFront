@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
 
 export class CreateRequestComponent {
   request: Request = {
+    idRequest: '',
+    date: '',
     eventTime: '',
     user: '',
     office: '',
