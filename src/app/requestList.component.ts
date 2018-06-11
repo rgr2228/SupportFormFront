@@ -14,8 +14,8 @@ export class RequestListComponent {
   constructor(public service: ServiciosService, public router: Router) {
     this.service.getRequests().subscribe(
       result => {
-        var obj = JSON.parse(result);
-        this.requests = obj.clienteWS;
+        const obj = JSON.parse(result);
+        this.requests = obj.request;
       }
     );
   }

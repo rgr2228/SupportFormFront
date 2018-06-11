@@ -1,15 +1,11 @@
 <form name="requestForm" (submit)="onSave()">
 	<div>
 		<div>
-			<label>Fecha:</label>
-			<input type="date" placeholder="Fecha de solicitud" required [(ngModel)]="request.date" name="date">
-		</div>
-		<div>
 			<label>Hora:</label>
-			<input type="time" placeholder="Hora de solicitud" required [(ngModel)]="request.eventTime" name="eventTime">
+			<input type="text" placeholder="Hora de solicitud" required [(ngModel)]="request.eventTime" name="eventTime">
 		</div>
 		<div>
-			<label>Nombre:</label>
+			<label>Email:</label>
 			<input type="text" placeholder="Nombre del solicitante" required [(ngModel)]="request.user" name="user">
 		</div>
 		<div>
@@ -22,7 +18,7 @@
     </div>
     <div>
 			<label>Tipo:</label>
-			<input type="text" placeholder="Tipo de solicitud" required [(ngModel)]="request.type" name="typeRequest">
+			<input type="text" placeholder="Tipo de solicitud" required [(ngModel)]="request.typeRequest" name="typeRequest">
     </div>
     <div>
 			<label>Canal:</label>
@@ -38,7 +34,7 @@
     </div>
     <div>
 			<label>Estado:</label>
-			<input type="text" placeholder="Estado de solicitud" required [(ngModel)]="request.status" name="state">
+			<input type="text" placeholder="Estado de solicitud" required [(ngModel)]="request.state" name="state">
     </div>
 		<button type="submit">Guardar</button>
 		<span>{{errorMessage}}</span>
