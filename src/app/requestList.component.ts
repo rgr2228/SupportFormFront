@@ -5,7 +5,8 @@ import {ServiciosService} from './user.service';
 import {Router} from '@angular/router';
 
 @Component({
-    templateUrl: './requestList.html'
+    templateUrl: './requestList.html',
+    styleUrls: ['./requestList.component.css']
 })
 
 export class RequestListComponent {

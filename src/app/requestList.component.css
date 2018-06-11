@@ -1,0 +1,33 @@
+.table, th , td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+.table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+.table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+button {
+  background: #6c9a06;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+
+th {
+  background-color: #0d4928;
+  color: white;
+}
+
+td{
+  color: #0d4928
+}
