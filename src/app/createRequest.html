@@ -1,42 +1,14 @@
-<form name="requestForm" (submit)="onSave()">
-	<div>
-		<div>
-			<label>Hora:</label>
-			<input type="text" placeholder="Hora de solicitud" required [(ngModel)]="request.eventTime" name="eventTime">
-		</div>
-		<div>
-			<label>Email:</label>
-			<input type="text" placeholder="Nombre del solicitante" required [(ngModel)]="request.user" name="user">
-		</div>
-		<div>
-			<label>Oficina:</label>
-			<input type="text" placeholder="Oficina del solicitante" required [(ngModel)]="request.office" name="office">
-    </div>
-    <div>
-			<label>Descripción:</label>
-			<input type="text" placeholder="Descripción de solicitud" required [(ngModel)]="request.description" name="description">
-    </div>
-    <div>
-			<label>Tipo:</label>
-			<input type="text" placeholder="Tipo de solicitud" required [(ngModel)]="request.typeRequest" name="typeRequest">
-    </div>
-    <div>
-			<label>Canal:</label>
-			<input type="text" placeholder="Canal de solicitud" required [(ngModel)]="request.channel" name="channel">
-    </div>
-    <div>
-			<label>Prioridad:</label>
-			<input type="text" placeholder="Prioridad de solicitud" required [(ngModel)]="request.priority" name="priority">
-    </div>
-    <div>
-			<label>Nivel:</label>
-			<input type="text" placeholder="Nivel de solicitud" required [(ngModel)]="request.level" name="level">
-    </div>
-    <div>
-			<label>Estado:</label>
-			<input type="text" placeholder="Estado de solicitud" required [(ngModel)]="request.state" name="state">
-    </div>
-		<button type="submit">Guardar</button>
-		<span>{{errorMessage}}</span>
-	</div>
-</form>
+<div class="login-page">
+  <div class="form">
+    <form name="requestForm" (submit)="onSave()" class="login-form">
+      <input type="text" placeholder="Hora de solicitud" required [(ngModel)]="request.eventTime" name="eventTime">
+      <input type="text" placeholder="correo del solicitante" required [(ngModel)]="request.user" name="user">
+      <input type="text" placeholder="Oficina del solicitante" required [(ngModel)]="request.office" name="office">
+      <input type="text" placeholder="Descripción de solicitud" required [(ngModel)]="request.description" name="description">
+      <input type="text" placeholder="Prioridad: 1-baja, 2-media, 3-alta" required [(ngModel)]="request.priority" name="priority">
+      <input type="text" placeholder="Nivel: 1-software, 2-hardware" required [(ngModel)]="request.level" name="level">
+      <button type="submit">Guardar</button>
+      <span>{{errorMessage}}</span>
+    </form>
+  </div>
+</div>
