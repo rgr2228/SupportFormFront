@@ -27,8 +27,8 @@ export class ServiciosService {
 
     createRequest(requestWS: Request) {
       return this.http.post('http://localhost:8080/SupportFormServices/rest/Request/create', {'eventTime': requestWS.eventTime,
-      'user': requestWS.user, 'office': requestWS.office, 'description': requestWS.description, 'typeRequest': requestWS.typeRequest,
-    'channel': requestWS.channel, 'priority': requestWS.priority, 'level': requestWS.level, 'state': requestWS.state})
+      'user': requestWS.user, 'office': requestWS.office, 'description': requestWS.description, 'typeRequest': 'incidente',
+    'channel': 'Pagina Web', 'priority': requestWS.priority, 'level': requestWS.level, 'state': 'P'})
       .map(response => response.text());
     }
 

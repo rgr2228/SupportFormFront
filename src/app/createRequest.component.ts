@@ -29,10 +29,10 @@ export class CreateRequestComponent {
   onSave() {
     this.service.createRequest(this.request).subscribe(
       result => {
-        if (result === '') {
-          this.router.navigate(['/requests']);
-        } else {
+        if (result['idRequest'] === '') {
           this.errorMessage = result;
+        } else {
+          this.router.navigate(['/requests']);
         }
     }
     );
