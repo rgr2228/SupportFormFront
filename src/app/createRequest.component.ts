@@ -29,11 +29,13 @@ export class CreateRequestComponent {
   onSave() {
     this.service.createRequest(this.request).subscribe(
       result => {
-        if (result['idRequest'] === '') {
-          this.errorMessage = result;
-        } else {
+        console.log(result);
+        if (result['idRequest'] !== '') {
           this.router.navigate(['/requests']);
+        } else if ( result === null) {
+          alert('Usuario no encontrado');
         }
+
     }
     );
   }
